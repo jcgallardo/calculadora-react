@@ -28,15 +28,21 @@ const mathOperations = (
     </div>
 );
 
+const resultLabel = (
+    <div className="result-label" contentEditable="true"></div>
+);
+
 
 const App = () => (
     <div className="calculadora">
-        <h1>Calculadora</h1>
-        <div>
-            { numbers }
-            { functions }
+        { resultLabel }
+        <div className="grid">
+            <div>
+                { numbers }
+                { functions }
+            </div>
+            { mathOperations }
         </div>
-        { mathOperations }
     </div>
 )
 

@@ -12,15 +12,46 @@ body{
     align-items: center;
     background-color: rgb(9, 8, 22);
 }
+
 .calculadora{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #333;
+    border: 1px solid rgba(255,255,255,0.2)
+}
+
+.result-label{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    line-height: 30px;
+    font-size: 26px;
+    height: 30px;
+    background-color: rgba(0,0,0, 0.3);
+    color:white;
+}
+
+.calculadora .grid{
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 20px;
     box-shadow: 0 0 10px 1px rgba(0,0,0, 0.1);
-    background-color: #333;
 }
-.calculadora button{
+
+.calculadora h1{
+    display: flex;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 18px;
+    padding: 5px 7px;
+    top: -10px;
+    transform: translateY(-120%);
+    background-color: rgba(255,255,255,0.5);
+}
+.calculadora .grid button{
     border: 0;
     font: inherit;
     line-height: normal;
@@ -33,52 +64,46 @@ body{
     -moz-user-select: none;
     -ms-user-select: none;
     background-color: transparent;
-}
 
-.calculadora h1{
-    display: flex;
-    color: grey;
-    border: 1px solid grey;
-    border-radius: 10px;
-    background-color: white;
-    position: absolute;
-    font-size: 18px;
-    padding: 5px 7px;
-    top: -10px;
-    transform: translateY(-50%);
-}
-.calculadora button{
+    font-size: 22px;
+    font-family: fantasy;
     width: 80px;
     height: 80px;
+    transition: border ease-in-out 0.3s;
+    cursor: pointer;
 }
 
-.numbers{
+.calculadora .grid button:hover{
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.calculadora .grid .numbers{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 240px;
 }
 
-.numbers button{
+.calculadora .grid .numbers button{
     color: orange;
 }
 
-.functions{
+.calculadora .grid .functions{
     display: flex;
     flex-direction: row;
     width: 240px;
 }
 
-.functions button{
+.calculadora .grid .functions button{
     color: indianred;
 }
 
 
-.math-operations{
+.calculadora .grid .math-operations{
     display: flex;
     flex-direction: column;
 }
 
-.math-operations button{
+.calculadora .grid .math-operations button{
     color: indianred;
 }
