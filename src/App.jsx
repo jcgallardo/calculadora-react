@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css"
+import Result from "./components/Result";
 
 const numbers = (
     <div className="numbers">
@@ -28,14 +29,10 @@ const mathOperations = (
     </div>
 );
 
-const resultLabel = (
-    <div className="result-label" contentEditable="true"></div>
-);
-
 
 const App = () => (
     <div className="calculadora">
-        { resultLabel }
+        <Result className="result-label" />
         <div className="grid">
             <div>
                 { numbers }
