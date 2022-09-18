@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Result = ({ className }) => {
+const Result = ({ className, value }) => {
   const resultClass = classNames(className);
   return (
-    <div className={ resultClass } contentEditable="true">
-        0
+    <div className={ resultClass }>
+      { value }
     </div>
   )
 }
