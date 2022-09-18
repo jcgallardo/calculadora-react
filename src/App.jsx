@@ -16,8 +16,8 @@ const App = () => {
         console.log('Delete click!');
     }
 
-    const handleClickNumber = () => {
-        console.log('Number click!')
+    const handleClickNumber = (number) => {
+        console.log('Number click!', number)
     }
 
     const handleClickOperation = (operation) => {
@@ -29,7 +29,7 @@ const App = () => {
     }
 
     return (
-        <div className="calculadora">
+        <main className="calculadora">
             <Result className="result-label" value={ "5" } />
             <div className="grid">
                 <div>
@@ -46,7 +46,7 @@ const App = () => {
                     onClickOperation={ handleClickOperation }
                 />
             </div>
-        </div>
+        </main>
     )
 }
 

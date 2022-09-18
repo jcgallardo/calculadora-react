@@ -7,10 +7,10 @@ const Functions = ({className, onContentClear, onDelete}) => {
     const functionsClass = classNames(className);
 
     return (
-        <div className={ functionsClass }>
-            <Button key={ `function-button-clear` } onClick={ onContentClear }>Clear</Button>
+        <section className={ functionsClass }>
+            <Button key={ `function-button-clear` } onClick={ onContentClear } type="button-long-text">CLEAR</Button>
             <Button key={ `function-button-undo` } onClick={ onDelete }>&#8592;</Button>
-        </div>
+        </section>
     )
 }
 

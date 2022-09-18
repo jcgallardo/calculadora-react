@@ -5,9 +5,9 @@ import classNames from 'classnames'
 const Result = ({ className, value }) => {
   const resultClass = classNames(className);
   return (
-    <div className={ resultClass }>
+    <section className={ resultClass }>
       { value }
-    </div>
+    </section>
   )
 }
 

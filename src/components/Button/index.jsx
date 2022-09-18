@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
+import './Button.css';
+
 const Button = ({ children, className, onClick, type }) => {
   const buttonClass = classNames(className, type);
 
@@ -20,12 +22,14 @@ const Button = ({ children, className, onClick, type }) => {
 Button.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    type: PropTypes.oneOf(['button-long-text'])
 }
 
 Button.defaultProps = {
   className: '',
-  onClick: null
+  onClick: null,
+  type: null
 }
 
 export default Button

@@ -6,18 +6,21 @@ import Button from './Button'
 const Numbers = ({ className, onClickNumber }) => {
     const numberClass = classNames(className);
     return (
-        <div className={ numberClass }>
+        <section className={ numberClass }>
             {
-                Array(10).fill(null).map((value, index) => (
-                    <Button
-                        key={ `number-button-${index}` }
-                        onClick={ onClickNumber }
-                    >
-                        { (index + 1) % 10 }
-                    </Button>
-                ))
+                Array(10).fill(null).map((value, index) => {
+                    const val = (index + 1) % 10;
+                    return (
+                        <Button
+                            key={ val }
+                            onClick={ () => onClickNumber(val) }
+                        >
+                            { val }
+                        </Button>
+                    );
+                })
             }
-        </div>
+        </section>
     )
 }
 
