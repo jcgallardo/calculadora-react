@@ -12,7 +12,8 @@ const Result = ({ className, value }) => {
 }
 
 Result.propTypes = {
-    className: PropTypes.string
+    className: PropTypes.string,
+    value: PropTypes.string.isRequired
 }
 
 Result.defaultProps = {

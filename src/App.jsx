@@ -8,13 +8,13 @@ import Result from "./components/Result";
 
 const App = () => (
     <div className="calculadora">
-        <Result className="result-label" value={ 5 } />
+        <Result className="result-label" value={ "5" } />
         <div className="grid">
             <div>
-                <Numbers />
-                <Functions />
+                <Numbers className="numbers" />
+                <Functions className="functions" />
             </div>
-            <MathOperations />
+            <MathOperations className="math-operations" />
         </div>
     </div>
 )
