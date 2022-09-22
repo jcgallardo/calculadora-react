@@ -19,7 +19,6 @@ const App = () => {
     }
 
     const calculate = (newResult) => {
-        setInit(true);
         const calculation = eval((newResult || result).toString().replace('x','*'));
         return calculation.toString();
     }
@@ -51,6 +50,7 @@ const App = () => {
     }
 
     const handleClickEqual = () => {
+        setInit(true);
         setResult(total);
         setTotal('');
     }
