@@ -1,4 +1,4 @@
 .button-long-text {
-    font-size: 12px !important;
-    line-height: 87px !important;
+    text-transform: uppercase;
+    background-color: rgba(128, 128,128, 0.1) !important;
 }
