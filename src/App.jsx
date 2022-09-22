@@ -25,7 +25,9 @@ const App = () => {
     }
 
     const handleContentClear = () => {
-        setResult('');
+        const newResult = '';
+        setResult(newResult);
+        setTotal(newResult);
     }
 
     const handleDelete = () => {
@@ -57,7 +59,7 @@ const App = () => {
         <main className="calculadora">
             <Result className="result-label" value={ result } total={ total } />
             <div className="grid">
-                <div>
+                <div className="numbers-functions">
                     <Numbers className="numbers" onClickNumber={ handleClickNumber } />
                     <Functions
                         className="functions"

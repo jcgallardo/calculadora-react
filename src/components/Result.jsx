@@ -7,7 +7,7 @@ const Result = ({ className, total, value }) => {
   return (
     <section className={ resultClass }>
       { value }
-      <span className='result-total'>{ total }</span>
+      { total !== '' && <span className='result-total'>{ total }</span> }
     </section>
   )
 }
