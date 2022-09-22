@@ -3,19 +3,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from './Button'
 
+const numbers = [7,8,9,4,5,6,1,2,3,0];
+
 const Numbers = ({ className, onClickNumber }) => {
     const numberClass = classNames(className);
     return (
         <section className={ numberClass }>
             {
-                Array(10).fill(null).map((value, index) => {
-                    const val = (index + 1) % 10;
+                numbers.map((value) => {
                     return (
                         <Button
-                            key={ val }
-                            onClick={ () => onClickNumber(val) }
+                            key={ value }
+                            onClick={ () => onClickNumber(value) }
                         >
-                            { val }
+                            { value }
                         </Button>
                     );
                 })
