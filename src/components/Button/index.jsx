@@ -8,7 +8,6 @@ const Button = ({ children, className, onClick, type }) => {
   const buttonClass = classNames(className, type);
 
   const handleClick = (event) => {
-    console.log('Button click!', event);
     onClick && onClick();
   }
 

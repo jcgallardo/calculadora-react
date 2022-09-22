@@ -33,6 +33,11 @@ body{
     text-align: right;
 }
 
+.result-label .result-total{
+    font-size: 14px;
+    line-height: 14px;
+}
+
 .calculadora .grid{
     position: relative;
     display: flex;

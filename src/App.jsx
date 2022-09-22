@@ -11,23 +11,17 @@ const App = () => {
 
     const [result, setResult] = useState('');
     const [init, setInit] = useState(true);
+    const [total, setTotal] = useState('');
 
     const concatResult = (concat, separator = false) => {
         const separatorStr = separator ? ' ' : '';
-        return `${
-            result
-        }${
-            separatorStr
-        }${
-            concat
-        }${
-            separatorStr
-        }`
+        return `${result}${separatorStr}${concat}${separatorStr}`;
     }
 
-    const calculate = () => {
+    const calculate = (newResult) => {
         setInit(true);
-        return `${(eval(result))}`;
+        const calculation = eval((newResult || result).toString().replace('x','*'));
+        return calculation.toString();
     }
 
     const handleContentClear = () => {
@@ -39,12 +33,12 @@ const App = () => {
     }
 
     const handleClickNumber = (number) => {
+        const newResult = init ? number : concatResult(number);
         if (init) {
             setInit(false);
-            setResult(number);
-        } else {
-            setResult(concatResult(number));
         }
+        setResult(newResult);
+        setTotal(calculate(newResult));
     }
 
     const handleClickOperation = (operation) => {
@@ -55,12 +49,13 @@ const App = () => {
     }
 
     const handleClickEqual = () => {
-        setResult(calculate());
+        setResult(total);
+        setTotal('');
     }
 
     return (
         <main className="calculadora">
-            <Result className="result-label" value={ result } />
+            <Result className="result-label" value={ result } total={ total } />
             <div className="grid">
                 <div>
                     <Numbers className="numbers" onClickNumber={ handleClickNumber } />

@@ -10,7 +10,7 @@ const MathOperations = ({ className, onClickOperation, onClickEqual }) => {
         <section className={ mathClass }>
             <Button key={ `math-button-plus` } onClick={ () => onClickOperation("+") }>+</Button>
             <Button key={ `math-button-minus` } onClick={ () => onClickOperation("-") }>-</Button>
-            <Button key={ `math-button-multiply` } onClick={ () => onClickOperation("*") }>*</Button>
+            <Button key={ `math-button-multiply` } onClick={ () => onClickOperation("x") }>x</Button>
             <Button key={ `math-button-divide` } onClick={ () => onClickOperation("/") }>/</Button>
             <Button key={ `math-button-equal` } onClick={ onClickEqual }>=</Button>
         </section>
