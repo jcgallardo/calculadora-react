@@ -33,7 +33,7 @@ const App = () => {
     }
 
     const handleClickNumber = (number) => {
-        const newResult = init ? number : concatResult(number);
+        const newResult =`${init ? number : concatResult(number)}`;
         if (init) {
             setInit(false);
         }
